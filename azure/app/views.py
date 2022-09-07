@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 import psycopg2
-# from azure.cosmos import exceptions, CosmosClient, PartitionKey, cosmos_client
+from azure.cosmos import exceptions, CosmosClient, PartitionKey, cosmos_client
 import webbrowser
 import requests
 import psycopg2
@@ -1191,7 +1191,6 @@ def PowerBiAutoMationAPI(name):
     groupIdForClone = "643349bb-3631-4bf4-ae4b-3950e5a96f6a"
 
     api_response = create_groups(name, APPLICATION_ID, APPLICATION_SECRET, USER_ID, USER_PASSWORD)
-    # import pdb;pdb.set_trace()
     records.append(api_response.json()["id"])  # Adding group Id
     json1 = {
         "name": "farrgut",
